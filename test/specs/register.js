@@ -90,6 +90,15 @@ describe('Login page', () => {
     it('should choose click button', () => {
         const element = $('form button[type="submit"]');
         element.click();
-        browser.pause(3000);
+        browser.pause(2000);
+    });
+});
+
+describe('You are a new user page', () => {
+    it('should have a correct title', () => {
+        const actualH1text = $('h1').getText();
+        const expectedH1Text = 'You are a new user';
+        expect(actualH1text).equal(expectedH1Text);
+        browser.pause(1000);
     });
 });
