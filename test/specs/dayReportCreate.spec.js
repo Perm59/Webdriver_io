@@ -2,13 +2,19 @@ const { expect } = require('chai');
 const { URL_LOGIN } = require('./register_data');
 
 describe('CREATE DAY REPORT', () => {
-    it('Login as admin', () => {
-        browser.url(URL_LOGIN);
-        $('form input[name="email"]').setValue('ooopartner00@mail.ru');
-        $('form input[name="password"]').setValue('123456');
-        $('form button[type="submit"]').click();
-        browser.pause(2000);
-    });
+  it('Login as admin', () => {
+    browser.url(URL_LOGIN);
+    $('form input[name="email"]').setValue('ooopartner00@mail.ru');
+    $('form input[name="password"]').setValue('123456');
+    $('form button[type="submit"]').click();
+    browser.pause(2000);
+  });
+
+  it('should click Diary button', () => {
+    const element = $(pageRegisterSelectors.submitButton);
+    element.click();
+    browser.pause(3000);
+  });
 });
 
 // describe('Register page', () => {
