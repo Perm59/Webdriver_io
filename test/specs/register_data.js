@@ -12,7 +12,8 @@ const user = {
   email,
   about: 'hdfkdfjldlkfj djdfsdfjdfkj kdfjdkfdj',
   goals: 'eat sleep code',
-  englishLevel: 'Native'
+  englishLevel: 'Native',
+
 };
 
 const pageRegister = {
@@ -33,7 +34,11 @@ const pageRegisterSelectors = {
   passwordInput: 'form input[name="password"]',
   aboutInput: 'form textarea[name="about"]',
   goalsInput: 'form textarea[name="goals"]',
-  englishLevelInput: 'form select[name="englishLevel"]'
+  englishLevelInput: 'form select[name="englishLevel"]',
+  createGroupButton: 'a.btn.btn-secondary',
+  groupNameInput: 'form input[name="name"]',
+  accessTypeInput: 'form select[name="accessType"]',
+  groupDescriptionInput: 'form input[name="description"]',
 
 };
 
@@ -47,4 +52,17 @@ const pageConfirmation = {
   h1: 'You are a new user',
 };
 
-module.exports = { URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors, pageLogin, pageConfirmation };
+const pageGroups = {
+  h1: 'Groups',
+  description: 'You may allow to see hidden groups. Ask admin to add you to group.',
+};
+
+const pageCreateNewGroup = {
+  h1: 'Create new Group',
+  groupName: 'Resume',
+  accessType: 'Members',
+  groupDescription: 'How to create a good resume.',
+  h4: 'Group created',
+};
+
+module.exports = { URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors, pageLogin, pageConfirmation, pageGroups, pageCreateNewGroup };

@@ -10,11 +10,11 @@ describe('CREATE DAY REPORT', () => {
     browser.pause(2000);
   });
 
-  it('should click Diary button', () => {
-    const element = $(pageRegisterSelectors.submitButton);
-    element.click();
-    browser.pause(3000);
-  });
+  // it('should click Diary button', () => {
+  //   const element = $('form button[type="submit"]');
+  //   element.click();
+  //   browser.pause(3000);
+  // });
 });
 
 // describe('Register page', () => {
