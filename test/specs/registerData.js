@@ -1,6 +1,4 @@
-const HOST = 'https://stage.pasv.us';
-const URL_REGISTER = `${HOST}/user/register`;
-const URL_LOGIN = `${HOST}/user/login`;
+
 
 const email = Math.random().toFixed(4)+'kakak@gmail.com';
 
@@ -35,17 +33,21 @@ const pageRegisterSelectors = {
   aboutInput: 'form textarea[name="about"]',
   goalsInput: 'form textarea[name="goals"]',
   englishLevelInput: 'form select[name="englishLevel"]',
-  createGroupButton: 'a.btn.btn-secondary',
+  createButton: 'a.btn.btn-secondary',
   groupNameInput: 'form input[name="name"]',
   accessTypeInput: 'form select[name="accessType"]',
   groupDescriptionInput: 'form input[name="description"]',
-
+  moraleInput: 'form select[name="morale"]',
+  studyHoursInput: 'input.form-control',
+  dairyDescriptionInput: 'textarea.form-control',
 };
 
 const pageLogin = {
   title: 'Progress Monitor',
   h1: 'User Login',
   buttonText: 'Submit',
+  email: 'ooopartner00@mail.ru',
+  password: '123456',
 };
 
 const pageConfirmation = {
@@ -65,4 +67,20 @@ const pageCreateNewGroup = {
   h4: 'Group created',
 };
 
-module.exports = { URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors, pageLogin, pageConfirmation, pageGroups, pageCreateNewGroup };
+const pageDiary = {
+  h1: 'Daily reports',
+};
+
+const pageAdmin = {
+  h1: 'Arthur Aminov',
+};
+
+const pageCreateDayReport = {
+  h1: 'Create day report',
+  morale: '9',
+  hours: '8',
+  description: 'Day was perfect and full of fun!',
+};
+
+module.exports = { user, pageRegister, pageRegisterSelectors, pageLogin,
+  pageConfirmation, pageGroups, pageCreateNewGroup, pageDiary, pageAdmin, pageCreateDayReport };

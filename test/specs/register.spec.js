@@ -1,6 +1,7 @@
-const { URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors, pageLogin, pageConfirmation } = require('./register_data');
-
 const { expect } = require('chai');
+
+const { user, pageRegister, pageRegisterSelectors, pageLogin, pageConfirmation } = require('./registerData');
+const { URL_REGISTER, URL_LOGIN } = require('./urlData');
 
 describe('Register page', () => {
   it('should have the right title', () => {

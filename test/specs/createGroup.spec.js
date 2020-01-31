@@ -1,5 +1,7 @@
 const { expect } = require('chai');
-const { URL_LOGIN, pageLogin, pageGroups, pageRegisterSelectors, pageCreateNewGroup } = require('./register_data');
+
+const { pageLogin, pageGroups, pageRegisterSelectors, pageCreateNewGroup, pageAdmin } = require('./registerData');
+const { URL_LOGIN } = require('./urlData');
 
 describe('CREATE GROUP', () => {
   it('should have the right title of tab', () => {
@@ -16,10 +18,16 @@ describe('CREATE GROUP', () => {
   });
 
   it('Login as admin', () => {
-    $('form input[name="email"]').setValue('ooopartner00@mail.ru');
-    $('form input[name="password"]').setValue('123456');
+    $('form input[name="email"]').setValue(pageLogin.email);
+    $('form input[name="password"]').setValue(pageLogin.password);
     $('form button[type="submit"]').click();
     browser.pause(2000);
+  });
+
+  it('should have a correct title of Admin page', () => {
+    const actual = $('h1').getText();
+    const expected = pageAdmin.h1;
+    expect(actual).equal(expected);
   });
 
   it('should click Groups link', () => {
@@ -36,7 +44,7 @@ describe('CREATE GROUP', () => {
   });
 
   it('should click Create new Group button', () => {
-    const element = $(pageRegisterSelectors.createGroupButton);
+    const element = $(pageRegisterSelectors.createButton);
     element.click();
     browser.pause(1000);
   });
