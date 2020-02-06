@@ -22,6 +22,8 @@ describe('CREATE DAY REPORT', () => {
     $('form input[name="password"]').setValue(pageLogin.password);
     $('form button[type="submit"]').click();
     browser.pause(2000);
+
+    browser.$('//input[@name="email"]').setValue(pageLogin.email);
   });
 
   it('should have a correct title of Admin page', () => {
