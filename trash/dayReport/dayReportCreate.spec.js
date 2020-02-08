@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 
-const { pageLogin, pageDiary, pageAdmin, pageRegisterSelectors, pageCreateDayReport  } = require('./registerData');
-const { URL_LOGIN } = require('./urlData');
+const { pageLogin, pageDiary, pageAdmin, pageRegisterSelectors, pageCreateDayReport  } = require('../registerData');
+const { URL_LOGIN } = require('../urlData');
 
 describe('CREATE DAY REPORT', () => {
   it('should have the right title of tab', () => {
@@ -18,12 +18,12 @@ describe('CREATE DAY REPORT', () => {
   });
 
   it('Login as admin', () => {
-    $('form input[name="email"]').setValue(pageLogin.email);
-    $('form input[name="password"]').setValue(pageLogin.password);
-    $('form button[type="submit"]').click();
+    //$('form input[name="email"]').setValue(pageLogin.email);
+    browser.$('//input[@name="email"]').setValue(pageLogin.email);
+    browser.$('//input[@name="password"]').setValue(pageLogin.password);
+    browser.$('//button[@type="submit"]').click();
     browser.pause(2000);
 
-    browser.$('//input[@name="email"]').setValue(pageLogin.email);
   });
 
   it('should have a correct title of Admin page', () => {
