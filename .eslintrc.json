@@ -16,7 +16,8 @@
         "SharedArrayBuffer": "readonly"
     },
     "parserOptions": {
-        "ecmaVersion": 2018
+        "ecmaVersion": 2018,
+        "sourceType": "module"
     },
     "rules": {
         "indent": [
@@ -37,3 +38,5 @@
         ]
     }
 }
+
+// npm install eslint-plugin-wdio --save-dev
