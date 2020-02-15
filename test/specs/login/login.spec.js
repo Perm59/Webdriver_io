@@ -9,7 +9,7 @@ describe('LOGIN (positive)', () => {
 
   it('should have correct title', () => {
     const actual = LoginPage.h1.getText();
-    const expected = 'Login Page';
+    const expected = 'User Login';
     expect(actual).eq(expected);
   });
 
